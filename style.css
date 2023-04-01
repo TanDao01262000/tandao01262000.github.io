@@ -1,0 +1,279 @@
+body {
+  padding-top: 70px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+
+  background: linear-gradient(45deg, #add8e6, #98fb98, #d3d3d3);
+  background-size: 400% 400%;
+  animation: gradient 4s ease infinite;
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+
+
+#skills, #about, #projects, #contact {
+  padding-top: 70px; /* adjust this value to match the height of your navbar */
+  margin-top: -70px; /* negative margin to offset the padding */
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Add hover effect for navbar links */
+.navbar-nav .nav-link:hover {
+  color: #151f48 !important;
+  transform: scale(2);
+  
+}
+
+/* Add animation for navbar brand */
+.navbar-brand {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Make navbar fixed at the top of the page */
+.navbar.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Add animation when scrolling down */
+.navbar.fixed-top {
+  background-color: #333;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.fixed-top .navbar-brand {
+  font-size: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.fixed-top .nav-link {
+  font-size: 1.2rem;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* Header styles */
+header {
+  height: 100vh;
+  background-image: url('https://source.unsplash.com/1600x900/?coding');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+/* Skills section styles */
+#skills {
+  padding: 5rem 0;
+
+}
+
+#skills h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.skills-list li {
+  transition: all 0.3s ease-in-out;
+}
+
+.skills-list li:hover {
+  transform: translateY(-5px);
+}
+
+
+/* End Skills */
+
+#contact {
+  margin-bottom: 2rem;
+}
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.about p {
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* About section styles */
+#about {
+    padding: 5rem 0;
+}
+
+#about h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+    font-size: 36px;
+  font-weight: bold;
+}
+
+#about p {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+#about .col-md-6 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} 
+
+#about .col-md-6 p {
+  max-width: 600px;
+  margin: 0 auto 20px;
+}
+
+.carousel-img {
+  height: 600px; 
+  max-height: 100%; /* Ensure the images stay responsive */
+  object-fit: cover; /* Scale the image while preserving aspect ratio */
+}
+
+/* svg, img in list animation */
+.skill-card {
+  padding-bottom: 1rem;
+}
+
+.skill-card img {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.skill-card svg {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.skill-card p {
+  font-size: 1.3rem;
+}
+
+
+.skill-card:hover img{
+   animation: scale-up-center 1.13s 0.5s infinite ease-in-out;
+}
+
+.skill-card:hover svg{
+   animation: rotate-scale-down 1.13s 0.5s infinite ease-in-out;
+}
+
+
+@keyframes rotate-scale-down {
+  0% {
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(0.5) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(1) rotateZ(360deg);
+  }
+}
+
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+
+
+/* Project img */
+
+#projects img {
+  max-width: 1000px;
+  max-height: 250px;
+  object-fit: contain;
+}
+
+.card {
+  position: relative;
+  overflow: hidden; /* Hide overflow from the gradient effect */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 255, 0) 0%, rgba(0, 0, 255, 0) 50%, rgba(0, 0, 255, 0.7) 100%);
+  opacity: 0; /* Hide the gradient initially */
+  transition: opacity 0.6s 0s ease; /* Adding a transition effect to the opacity property */
+}
+
+.card:hover::before {
+  opacity: 1; /* Show the gradient on hover */
+}
