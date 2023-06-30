@@ -1,34 +1,45 @@
+
 body {
   padding-top: 70px;
   font-family: "Open Sans", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
+  
+  background-color: #141414;
+  background-image: url(img/bg1.png);
+  background-size: cover;
+  color: #ecece4;
+  
+  animation: twinklingStars 400s linear infinite;
 
-  background: linear-gradient(45deg, #add8e6, #98fb98, #d3d3d3);
-  background-size: 400% 400%;
-  animation: gradient 4s ease infinite;
 }
 
 
-@keyframes gradient {
+
+@keyframes twinklingStars {
   0% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
   50% {
-    background-position: 100% 50%;
+    background-position: 100% 0%;
   }
   100% {
-    background-position: 0% 50%;
+    background-position: 0% 0%;
   }
 }
 
+*{
+  font-family: 'Roboto', sans-serif !important;
+  font-family: 'Shadows Into Light', cursive !important;
+}
+hr {
+  border: solid rgb(139, 131, 13)!important;
+}
 
-
-
-#skills, #about, #projects, #contact {
-  padding-top: 70px; /* adjust this value to match the height of your navbar */
-  margin-top: -70px; /* negative margin to offset the padding */
+.skills, .about, .projects, .contact {
+  padding-top: 70px; 
+  margin-top: -70px;
   
 }
 
@@ -41,6 +52,12 @@ p {
   margin-bottom: 1rem;
 }
 
+.underline {
+  text-decoration: underline;
+  text-align: center;
+  padding: 1.5rem;
+}
+
 ul {
   list-style: none;
   padding-left: 0;
@@ -49,7 +66,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: #333;
+  color: #e9e5e5 !important;
 }
 
 /* Add hover effect for navbar links */
@@ -61,7 +78,8 @@ a {
 
 /* Add animation for navbar brand */
 .navbar-brand {
-  transition: all 0.3s ease-in-out;
+  font-size: 2rem !important;
+  color:#b4be1b !important;
 }
 
 /* Make navbar fixed at the top of the page */
@@ -72,9 +90,8 @@ a {
   width: 100%;
 }
 
-/* Add animation when scrolling down */
 .navbar.fixed-top {
-  background-color: #333;
+  background-color: #414040 !important;
   transition: all 0.3s ease-in-out;
 }
 
@@ -89,175 +106,115 @@ a {
 }
 
 
-/* Header styles */
-header {
-  height: 100vh;
-  background-image: url('https://source.unsplash.com/1600x900/?coding');
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 4rem;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-  margin-bottom: 1rem;
-}
-
-header p {
-  font-size: 1.5rem;
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-
-
-/* Skills section styles */
-#skills {
-  padding: 5rem 0;
-
-}
-
-#skills h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.skills-list li {
-  transition: all 0.3s ease-in-out;
-}
-
-.skills-list li:hover {
-  transform: translateY(-5px);
-}
-
-
-/* End Skills */
-
-#contact {
-  margin-bottom: 2rem;
-}
+/* About section styles */
 
 .about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 50px;
+  padding: 6rem 0;
 }
+
+
+.about span {
+  color: #b4be1b;
+  font-size: larger;
+}
+
 
 .about p {
-  font-size: 20px;
-  line-height: 1.5;
-  text-align: center;
+  font-size: 1.5rem;
+  line-height: 2 ;
+  text-align: left;
 }
 
-/* About section styles */
-#about {
-    padding: 5rem 0;
-}
-
-#about h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-    font-size: 36px;
-  font-weight: bold;
-}
-
-#about p {
-  text-align: justify;
-  line-height: 1.5;
-}
-
-#about .col-md-6 {
+.about .col-md-6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
 } 
 
-#about .col-md-6 p {
+.about .col-md-6 p {
   max-width: 600px;
   margin: 0 auto 20px;
 }
 
 .carousel-img {
   height: 600px; 
-  max-height: 100%; /* Ensure the images stay responsive */
-  object-fit: cover; /* Scale the image while preserving aspect ratio */
+  max-height: 100%; 
+  object-fit: cover; 
 }
 
-/* svg, img in list animation */
+/* End About */
+
+
+/* Skills */
+.skills {
+  padding: 5rem 0;
+
+}
+
+
+
 .skill-card {
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
 }
 
 .skill-card img {
-  width: 50px;
-  height: 50px;
+  width: 3.5rem;
+  height: 3.5rem;
   display: block;
   margin: 0 auto;
+  background-color:#534f4f !important;
 }
 
 .skill-card svg {
-  width: 50px;
-  height: 50px;
+  width: 3.5rem;
+  height: 3.5rem;
   display: block;
   margin: 0 auto;
+  background-color:#534f4f !important;
 }
 
 .skill-card p {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 
-.skill-card:hover img{
-   animation: scale-up-center 1.13s 0.5s infinite ease-in-out;
-}
+/* End Skills */
 
-.skill-card:hover svg{
-   animation: rotate-scale-down 1.13s 0.5s infinite ease-in-out;
-}
-
-
-@keyframes rotate-scale-down {
-  0% {
-    transform: scale(1) rotateZ(0);
-  }
-  50% {
-    transform: scale(0.5) rotateZ(180deg);
-  }
-  100% {
-    transform: scale(1) rotateZ(360deg);
-  }
-}
-
-
-@keyframes scale-up-center {
-  0% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 
 
 
 /* Project img */
 
-#projects img {
+.projects img {
   max-width: 1000px;
   max-height: 250px;
   object-fit: contain;
+  background-color: rgba(12, 12, 12, 0.5);
+  
 }
+
+.projects p {
+  font-size: large;
+} 
 
 .card {
   position: relative;
-  overflow: hidden; /* Hide overflow from the gradient effect */
+  overflow: hidden;
+  text-align: center;
+  background-color: rgb(68, 78, 78);
 }
+
+/* Contact */
+
+.contact {
+  margin: 3rem;
+  font-size: larger;
+}
+
+
+/* End Contact Section */
+
+
+/* Background Effect*/
+
+/*  */
