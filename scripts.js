@@ -31,8 +31,8 @@
 
       if (posFromTop - windowHeight <= 0 && elementMiddle > windowFadeMark) {
         var opacity = 1 - (elementMiddle - windowMiddle) / windowMiddle;
-        element.style.opacity = opacity;
-        
+        element.style.opacity = opacity + 0.2;
+
       } else {
         element.style.opacity = 1;
       }
