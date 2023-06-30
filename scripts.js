@@ -22,15 +22,17 @@
   function scrollFadeEffect(currentElements) {
     var windowHeight = window.innerHeight;
     var windowMiddle = windowHeight / 2;
+    var windowFadeMark = windowHeight / 4;
 
     for (var i = 0; i < currentElements.length; i++) {
       var element = currentElements[i];
       var posFromTop = element.getBoundingClientRect().top;
       var elementMiddle = posFromTop + element.offsetHeight / 2;
 
-      if (posFromTop - windowHeight <= 0 && elementMiddle > windowMiddle) {
+      if (posFromTop - windowHeight <= 0 && elementMiddle > windowFadeMark) {
         var opacity = 1 - (elementMiddle - windowMiddle) / windowMiddle;
         element.style.opacity = opacity;
+        
       } else {
         element.style.opacity = 1;
       }
